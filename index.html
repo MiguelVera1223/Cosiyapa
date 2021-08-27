@@ -48,6 +48,8 @@
                 <br><br><br><br><br>
                 <input type="button" value="Sortear" onclick="miRuleta.startAnimation();" class="btn btn-success btn-lg"
                        style="width: 200px;margin-left: 0px;border: 2px solid #ffffff">
+                <input type="button" value="Actualizar" onClick="location.reload(false);" class="btn btn-success btn-lg"
+                style="width: 200px;margin-left: 0px;border: 2px solid #ffffff" >
 
             </center>
             <br><br>
@@ -126,25 +128,28 @@
             {'fillStyle': '#FFFFFF','text': '                                 57'},
             {'fillStyle': '#FFFFFF','text': '                                 58'},
             {'fillStyle': '#FFFFFF','text': '                                 59'},
-            {'fillStyle': '#FFFFFF', 'text': '                                 8'},
+            {'fillStyle': '#FFFFFF', 'text':'                                 60'},
      
 
         ],
         'animation':{
             'type':'spinToStop',
-            'duration': 6,
+            'duration': 40,
             'callbackFinished':'Mensaje()',
             'callbackAfter':'dibujarIndicador()'
         }
     });
 
     dibujarIndicador();
+
+   
+   
     function Mensaje() {
         var SegmentoSeleccionado = miRuleta.getIndicatedSegment();
         
         
+        Swal.fire("Ganó el número  " + SegmentoSeleccionado.text + "😃")
         
-        alert("GANO EL NUMERO  " + SegmentoSeleccionado.text);
         if(SegmentoSeleccionado.text == "Pregunta 1"){
             $('#myModal1').modal({backdrop:'static'});
         }
@@ -163,12 +168,14 @@
         if(SegmentoSeleccionado.text == "Pregunta 6"){
             $('#myModal6').modal({backdrop:'static'});
         }
-    
+        preventDefault();
 
         miRuleta.stopAnimation(false);
         miRuleta.rotationAngle = 0;
         miRuleta.draw();
         dibujarIndicador();
+        preventDefault();
+      
     }
     function dibujarIndicador() {
         var ctx = miRuleta.ctx;
@@ -188,39 +195,6 @@
 
 </script>
 
-
-<!-- -->
-<!-- aqui introduccir la pregunta 1-->
-<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  style="width: 90%;margin: auto">
-    <div class="modal-dialog" role="document" style="width: 90%;margin: auto">
-        <div class="modal-content" style="width: 90%;margin: auto">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <center>
-                    <h2 class="modal-title" id="myModalLabel" style="color:#000">
-                        PREGUNTA 1</h2>
-            </div>
-            <div class="modal-body">
-                <br>
-                <center><h2> De que manera beneficia a nuestro organismo los alimentos naturales.</h2></center>
-            </div>
-            </center>
-            <hr>
-            <div class="row">
-
-            </div>
-        </div>
-        <br>
-
-        <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>
-        </div>
-    </div>
-</div>
-</div>
-<!-- Large modal -->
-
-<!-- Large modal -->
 
 
 <!-- *********************** SCRIPTS *********************************-->
