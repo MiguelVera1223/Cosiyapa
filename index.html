@@ -1,0 +1,230 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CosiYapa</title>
+    <script src="js/Winwheel.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/jQuery-2.1.4.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<style>
+    body{
+        background-image: url('./img/Fondo.png');
+        background-size: 100vw 100vh;/*escala automa el ancho y el alto*/
+        background-attachment: fixed;/*para que la imagen de fondo no se mueva*/
+        margin: 0;
+    }
+    .container{
+        
+        width: 100%;
+        height: 624px;
+        color: #a300b8;
+    }
+    .canvas{
+        margin-top: 4rem;
+    }
+    .cosiyapa{
+        width: 40rem; 
+    }
+    .btn{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 3rem;
+        font-weight: 500;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <br><br><br>
+            <center>
+                <img src="./img/Cosiyapa logo.png" alt="" class="cosiyapa">
+               
+                <br><br><br><br><br>
+                <input type="button" value="Sortear" onclick="miRuleta.startAnimation();" class="btn btn-success btn-lg"
+                       style="width: 200px;margin-left: 0px;border: 2px solid #ffffff">
+
+            </center>
+            <br><br>
+        </div>
+        <div class="col-md-6 canvas">
+            <canvas id="canvas" height="600px" width="600px">
+            </canvas>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    var miRuleta = new Winwheel({
+
+        'numSegments' : 60,
+        'outerRadius' : 270,
+        'segments':[
+            {'fillStyle': '#FFFFFF','text': '                                 1'},
+            {'fillStyle': '#FFFFFF','text': '                                 2'},
+            {'fillStyle': '#FFFFFF','text': '                                 3'},
+            {'fillStyle': '#FFFFFF','text': '                                 4'},
+            {'fillStyle': '#FFFFFF','text': '                                 5'},
+            {'fillStyle': '#FFFFFF','text': '                                 6'},
+            {'fillStyle': '#FFFFFF','text': '                                 7'},
+            {'fillStyle': '#FFFFFF','text': '                                 8'},
+            {'fillStyle': '#FFFFFF','text': '                                 9'},
+            {'fillStyle': '#FFFFFF','text': '                                 10'},
+            {'fillStyle': '#FFFFFF','text': '                                 11'},
+            {'fillStyle': '#FFFFFF','text': '                                 12'},
+            {'fillStyle': '#FFFFFF','text': '                                 13'},
+            {'fillStyle': '#FFFFFF','text': '                                 14'},
+            {'fillStyle': '#FFFFFF','text': '                                 15'},
+            {'fillStyle': '#FFFFFF','text': '                                 16'},
+            {'fillStyle': '#FFFFFF','text': '                                 17'},
+            {'fillStyle': '#FFFFFF','text': '                                 18'},
+            {'fillStyle': '#FFFFFF','text': '                                 19'},
+            {'fillStyle': '#FFFFFF','text': '                                 20'},
+            {'fillStyle': '#FFFFFF','text': '                                 21'},
+            {'fillStyle': '#FFFFFF','text': '                                 22'},
+            {'fillStyle': '#FFFFFF','text': '                                 23'},
+            {'fillStyle': '#FFFFFF','text': '                                 24'},
+            {'fillStyle': '#FFFFFF','text': '                                 25'},
+            {'fillStyle': '#FFFFFF','text': '                                 26'},
+            {'fillStyle': '#FFFFFF','text': '                                 27'},
+            {'fillStyle': '#FFFFFF','text': '                                 28'},
+            {'fillStyle': '#FFFFFF','text': '                                 29'},
+            {'fillStyle': '#FFFFFF','text': '                                 30'},
+            {'fillStyle': '#FFFFFF','text': '                                 31'},
+            {'fillStyle': '#FFFFFF','text': '                                 32'},
+            {'fillStyle': '#FFFFFF','text': '                                 33'},
+            {'fillStyle': '#FFFFFF','text': '                                 34'},
+            {'fillStyle': '#FFFFFF','text': '                                 35'},
+            {'fillStyle': '#FFFFFF','text': '                                 36'},
+            {'fillStyle': '#FFFFFF','text': '                                 37'},
+            {'fillStyle': '#FFFFFF','text': '                                 38'},
+            {'fillStyle': '#FFFFFF','text': '                                 39'},
+            {'fillStyle': '#FFFFFF','text': '                                 40'},
+            {'fillStyle': '#FFFFFF','text': '                                 41'},
+            {'fillStyle': '#FFFFFF','text': '                                 42'},
+            {'fillStyle': '#FFFFFF','text': '                                 43'},
+            {'fillStyle': '#FFFFFF','text': '                                 44'},
+            {'fillStyle': '#FFFFFF','text': '                                 45'},
+            {'fillStyle': '#FFFFFF','text': '                                 46'},
+            {'fillStyle': '#FFFFFF','text': '                                 47'},
+            {'fillStyle': '#FFFFFF','text': '                                 48'},
+            {'fillStyle': '#FFFFFF','text': '                                 49'},
+            {'fillStyle': '#FFFFFF','text': '                                 50'},
+            {'fillStyle': '#FFFFFF','text': '                                 51'},
+            {'fillStyle': '#FFFFFF','text': '                                 52'},
+            {'fillStyle': '#FFFFFF','text': '                                 53'},
+            {'fillStyle': '#FFFFFF','text': '                                 54'},
+            {'fillStyle': '#FFFFFF','text': '                                 55'},
+            {'fillStyle': '#FFFFFF','text': '                                 56'},
+            {'fillStyle': '#FFFFFF','text': '                                 57'},
+            {'fillStyle': '#FFFFFF','text': '                                 58'},
+            {'fillStyle': '#FFFFFF','text': '                                 59'},
+            {'fillStyle': '#FFFFFF', 'text': '                                 8'},
+     
+
+        ],
+        'animation':{
+            'type':'spinToStop',
+            'duration': 6,
+            'callbackFinished':'Mensaje()',
+            'callbackAfter':'dibujarIndicador()'
+        }
+    });
+
+    dibujarIndicador();
+    function Mensaje() {
+        var SegmentoSeleccionado = miRuleta.getIndicatedSegment();
+        
+        
+        
+        alert("GANO EL NUMERO  " + SegmentoSeleccionado.text);
+        if(SegmentoSeleccionado.text == "Pregunta 1"){
+            $('#myModal1').modal({backdrop:'static'});
+        }
+        if(SegmentoSeleccionado.text == "Pregunta 2"){
+            $('#myModal2').modal({backdrop:'static'});
+        }
+        if(SegmentoSeleccionado.text == "Pregunta 3"){
+            $('#myModal3').modal({backdrop:'static'});
+        }
+        if(SegmentoSeleccionado.text == "Pregunta 4"){
+            $('#myModal4').modal({backdrop:'static'});
+        }
+        if(SegmentoSeleccionado.text == "Pregunta 5"){
+            $('#myModal5').modal({backdrop:'static'});
+        }
+        if(SegmentoSeleccionado.text == "Pregunta 6"){
+            $('#myModal6').modal({backdrop:'static'});
+        }
+    
+
+        miRuleta.stopAnimation(false);
+        miRuleta.rotationAngle = 0;
+        miRuleta.draw();
+        dibujarIndicador();
+    }
+    function dibujarIndicador() {
+        var ctx = miRuleta.ctx;
+        ctx.strokeStyle = 'navy';
+        ctx.fillStyle = 'black';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(300,0);
+        ctx.lineTo(320,0);
+        ctx.lineTo(300,40);
+        ctx.lineTo(280,0);
+        ctx.stroke();
+        ctx.fill();
+    }
+
+
+
+</script>
+
+
+<!-- -->
+<!-- aqui introduccir la pregunta 1-->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  style="width: 90%;margin: auto">
+    <div class="modal-dialog" role="document" style="width: 90%;margin: auto">
+        <div class="modal-content" style="width: 90%;margin: auto">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <center>
+                    <h2 class="modal-title" id="myModalLabel" style="color:#000">
+                        PREGUNTA 1</h2>
+            </div>
+            <div class="modal-body">
+                <br>
+                <center><h2> De que manera beneficia a nuestro organismo los alimentos naturales.</h2></center>
+            </div>
+            </center>
+            <hr>
+            <div class="row">
+
+            </div>
+        </div>
+        <br>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Large modal -->
+
+<!-- Large modal -->
+
+
+<!-- *********************** SCRIPTS *********************************-->
+<script src="js/bootstrap.js"></script>
+<!-- *********************** SCRIPTS *********************************-->
+</body>
+</html>
