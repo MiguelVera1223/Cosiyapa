@@ -27,14 +27,23 @@
     }
     .canvas{
         margin-top: 4rem;
+       
     }
     .cosiyapa{
         width: 40rem; 
+        
     }
     .btn{
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 3rem;
         font-weight: 500;
+    }
+    .ruleta{
+        background:  #ffffff;
+        border-radius: 100%;
+        
+       
+        
     }
 </style>
 <body>
@@ -55,7 +64,7 @@
             <br><br>
         </div>
         <div class="col-md-6 canvas">
-            <canvas id="canvas" height="600px" width="600px">
+            <canvas id="canvas" class="ruleta" height="600px" width="600px">
             </canvas>
         </div>
     </div>
@@ -68,74 +77,74 @@
 
         'numSegments' : 60,
         'outerRadius' : 270,
+        'border-color': "#11545",
         'segments':[
-            {'fillStyle': '#FFFFFF','text': '                                 1'},
-            {'fillStyle': '#FFFFFF','text': '                                 2'},
-            {'fillStyle': '#FFFFFF','text': '                                 3'},
-            {'fillStyle': '#FFFFFF','text': '                                 4'},
-            {'fillStyle': '#FFFFFF','text': '                                 5'},
-            {'fillStyle': '#FFFFFF','text': '                                 6'},
-            {'fillStyle': '#FFFFFF','text': '                                 7'},
-            {'fillStyle': '#FFFFFF','text': '                                 8'},
-            {'fillStyle': '#FFFFFF','text': '                                 9'},
-            {'fillStyle': '#FFFFFF','text': '                                 10'},
-            {'fillStyle': '#FFFFFF','text': '                                 11'},
-            {'fillStyle': '#FFFFFF','text': '                                 12'},
-            {'fillStyle': '#FFFFFF','text': '                                 13'},
-            {'fillStyle': '#FFFFFF','text': '                                 14'},
-            {'fillStyle': '#FFFFFF','text': '                                 15'},
-            {'fillStyle': '#FFFFFF','text': '                                 16'},
-            {'fillStyle': '#FFFFFF','text': '                                 17'},
-            {'fillStyle': '#FFFFFF','text': '                                 18'},
-            {'fillStyle': '#FFFFFF','text': '                                 19'},
-            {'fillStyle': '#FFFFFF','text': '                                 20'},
-            {'fillStyle': '#FFFFFF','text': '                                 21'},
-            {'fillStyle': '#FFFFFF','text': '                                 22'},
-            {'fillStyle': '#FFFFFF','text': '                                 23'},
-            {'fillStyle': '#FFFFFF','text': '                                 24'},
-            {'fillStyle': '#FFFFFF','text': '                                 25'},
-            {'fillStyle': '#FFFFFF','text': '                                 26'},
-            {'fillStyle': '#FFFFFF','text': '                                 27'},
-            {'fillStyle': '#FFFFFF','text': '                                 28'},
-            {'fillStyle': '#FFFFFF','text': '                                 29'},
-            {'fillStyle': '#FFFFFF','text': '                                 30'},
-            {'fillStyle': '#FFFFFF','text': '                                 31'},
-            {'fillStyle': '#FFFFFF','text': '                                 32'},
-            {'fillStyle': '#FFFFFF','text': '                                 33'},
-            {'fillStyle': '#FFFFFF','text': '                                 34'},
-            {'fillStyle': '#FFFFFF','text': '                                 35'},
-            {'fillStyle': '#FFFFFF','text': '                                 36'},
-            {'fillStyle': '#FFFFFF','text': '                                 37'},
-            {'fillStyle': '#FFFFFF','text': '                                 38'},
-            {'fillStyle': '#FFFFFF','text': '                                 39'},
-            {'fillStyle': '#FFFFFF','text': '                                 40'},
-            {'fillStyle': '#FFFFFF','text': '                                 41'},
-            {'fillStyle': '#FFFFFF','text': '                                 42'},
-            {'fillStyle': '#FFFFFF','text': '                                 43'},
-            {'fillStyle': '#FFFFFF','text': '                                 44'},
-            {'fillStyle': '#FFFFFF','text': '                                 45'},
-            {'fillStyle': '#FFFFFF','text': '                                 46'},
-            {'fillStyle': '#FFFFFF','text': '                                 47'},
-            {'fillStyle': '#FFFFFF','text': '                                 48'},
-            {'fillStyle': '#FFFFFF','text': '                                 49'},
-            {'fillStyle': '#FFFFFF','text': '                                 50'},
-            {'fillStyle': '#FFFFFF','text': '                                 51'},
-            {'fillStyle': '#FFFFFF','text': '                                 52'},
-            {'fillStyle': '#FFFFFF','text': '                                 53'},
-            {'fillStyle': '#FFFFFF','text': '                                 54'},
-            {'fillStyle': '#FFFFFF','text': '                                 55'},
-            {'fillStyle': '#FFFFFF','text': '                                 56'},
-            {'fillStyle': '#FFFFFF','text': '                                 57'},
-            {'fillStyle': '#FFFFFF','text': '                                 58'},
-            {'fillStyle': '#FFFFFF','text': '                                 59'},
-            {'fillStyle': '#FFFFFF', 'text':'                                 60'},
+            {'fillStyle': '#CA3709','text': '                                 1'},
+            {'fillStyle': '#56ff3f','text': '                                 2'},
+            {'fillStyle': '#a8c0ff','text': '                                 3'},
+            {'fillStyle': '#0136f4','text': '                                 4'},
+            {'fillStyle': '#00B4DB','text': '                                 5'},
+            {'fillStyle': '#ec2F4B','text': '                                 6'},
+            {'fillStyle': '#a8ff78','text': '                                 7'},
+            {'fillStyle': '#74ebd5','text': '                                 8'},
+            {'fillStyle': '#396afc','text': '                                 9'},
+            {'fillStyle': '#ec2F4B','text': '                                 10'},
+            {'fillStyle': '#FF8C00','text': '                                 11'},
+            {'fillStyle': '#7F00FF','text': '                                 12'},
+            {'fillStyle': '#a17fe0','text': '                                 13'},
+            {'fillStyle': '#56ff3f','text': '                                 14'},
+            {'fillStyle': '#59C173','text': '                                 15'},
+            {'fillStyle': '#ad5389','text': '                                 16'},
+            {'fillStyle': '#CA3709','text': '                                 17'},
+            {'fillStyle': '#4e54c8','text': '                                 18'},
+            {'fillStyle': '#a8ff78','text': '                                 19'},
+            {'fillStyle': '#78ffd6','text': '                                 20'},
+            {'fillStyle': '#5D26C1','text': '                                 21'},
+            {'fillStyle': '#7F00FF','text': '                                 22'},
+            {'fillStyle': '#CA3709','text': '                                 23'},
+            {'fillStyle': '#59C173','text': '                                 24'},
+            {'fillStyle': '#FF8C00','text': '                                 25'},
+            {'fillStyle': '#78ffd6','text': '                                 26'},
+            {'fillStyle': '#CA3709','text': '                                 27'},
+            {'fillStyle': '#2ebf91','text': '                                 28'},
+            {'fillStyle': '#DA4453','text': '                                 29'},
+            {'fillStyle': '#56ff3f','text': '                                 30'},
+            {'fillStyle': '#ad5389','text': '                                 31'},
+            {'fillStyle': '#ec2F4B','text': '                                 32'},
+            {'fillStyle': '#f5af19','text': '                                 33'},
+            {'fillStyle': '#a8ff78','text': '                                 34'},
+            {'fillStyle': '#7F00FF','text': '                                 35'},
+            {'fillStyle': '#78ffd6','text': '                                 36'},
+            {'fillStyle': '#a8c0ff','text': '                                 37'},
+            {'fillStyle': '#56ff3f','text': '                                 38'},
+            {'fillStyle': '#2ebf91','text': '                                 39'},
+            {'fillStyle': '#FF8C00','text': '                                 40'},
+            {'fillStyle': '#CA3709','text': '                                 41'},
+            {'fillStyle': '#78ffd6','text': '                                 42'},
+            {'fillStyle': '#00B4DB','text': '                                 43'},
+            {'fillStyle': '#5D26C1','text': '                                 44'},
+            {'fillStyle': '#38ef7d','text': '                                 45'},
+            {'fillStyle': '#FF8C00','text': '                                 46'},
+            {'fillStyle': '#7F00FF','text': '                                 47'},
+            {'fillStyle': '#3F5EFB','text': '                                 48'},
+            {'fillStyle': '#ec38bc','text': '                                 49'},
+            {'fillStyle': '#74ebd5','text': '                                 50'},
+            {'fillStyle': '#a8ff78','text': '                                 51'},
+            {'fillStyle': '#ec2F4B','text': '                                 52'},
+            {'fillStyle': '#396afc','text': '                                 53'},
+            {'fillStyle': '#ad5389','text': '                                 54'},
+            {'fillStyle': '#ec38bc','text': '                                 55'},
+            {'fillStyle': '#a8c0ff','text': '                                 56'},
+            {'fillStyle': '#74ebd5','text': '                                 57'},
+            {'fillStyle': '#DA4453','text': '                                 58'},
+            {'fillStyle': '#7F00FF','text': '                                 59'},
+            {'fillStyle': '#ec38bc', 'text':'                                 60'},
      
 
         ],
         'animation':{
             'type':'spinToStop',
             'duration': 40,
-            'callbackFinished':'Mensaje()',
             'callbackAfter':'dibujarIndicador()'
         }
     });
